@@ -47,6 +47,11 @@ public class ElectionFrame extends javax.swing.JFrame {
         });
 
         JButtonConsolidated.setText("Consolidated");
+        JButtonConsolidated.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonConsolidatedActionPerformed(evt);
+            }
+        });
 
         jButtonWinner.setText("Winner");
         jButtonWinner.addActionListener(new java.awt.event.ActionListener() {
@@ -124,7 +129,8 @@ public class ElectionFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_JButtonVotingActionPerformed
 
     private void jButtonWinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonWinnerActionPerformed
-        // TODO add your handling code here:
+        String message = _election.winner();
+        JOptionPane.showMessageDialog(this, message, "Voting",JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButtonWinnerActionPerformed
 
     private void jTextFieldCandidatesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCandidatesActionPerformed
@@ -134,6 +140,11 @@ public class ElectionFrame extends javax.swing.JFrame {
     private void jTextFieldTablesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTablesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldTablesActionPerformed
+
+    private void JButtonConsolidatedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonConsolidatedActionPerformed
+        String message = _election.consolidated();
+        JOptionPane.showMessageDialog(this, message, "Voting", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_JButtonConsolidatedActionPerformed
 
     /**
      * @param args the command line arguments
