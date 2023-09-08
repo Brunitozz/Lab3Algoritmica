@@ -9,7 +9,7 @@ package electoral;
  * @author AULAFISI
  */
 public class ElectionFrame extends javax.swing.JFrame {
-
+    private Election _election;
     /**
      * Creates new form ElectionFrame
      */
@@ -26,21 +26,107 @@ public class ElectionFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JButtonVoting = new javax.swing.JButton();
+        JButtonConsolidated = new javax.swing.JButton();
+        jButtonWinner = new javax.swing.JButton();
+        jLabelCandidates = new javax.swing.JLabel();
+        jLabelTables = new javax.swing.JLabel();
+        jTextFieldCandidates = new javax.swing.JTextField();
+        jTextFieldTables = new javax.swing.JTextField();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        JButtonVoting.setText("Voting");
+        JButtonVoting.setToolTipText("");
+        JButtonVoting.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JButtonVotingActionPerformed(evt);
+            }
+        });
+
+        JButtonConsolidated.setText("Consolidated");
+
+        jButtonWinner.setText("Winner");
+        jButtonWinner.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonWinnerActionPerformed(evt);
+            }
+        });
+
+        jLabelCandidates.setText("Candidates");
+
+        jLabelTables.setText("Tables");
+
+        jTextFieldCandidates.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldCandidatesActionPerformed(evt);
+            }
+        });
+
+        jTextFieldTables.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldTablesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabelCandidates, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabelTables, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldCandidates)
+                    .addComponent(jTextFieldTables, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                    .addComponent(jButtonWinner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(JButtonConsolidated, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(JButtonVoting, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(36, 36, 36))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JButtonVoting)
+                    .addComponent(jLabelCandidates)
+                    .addComponent(jTextFieldCandidates, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(67, 67, 67)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldTables, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTables)
+                    .addComponent(JButtonConsolidated))
+                .addGap(44, 44, 44)
+                .addComponent(jButtonWinner)
+                .addContainerGap(78, Short.MAX_VALUE))
         );
+
+        JButtonVoting.getAccessibleContext().setAccessibleDescription("jButtonVoting");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JButtonVotingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonVotingActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_JButtonVotingActionPerformed
+
+    private void jButtonWinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonWinnerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonWinnerActionPerformed
+
+    private void jTextFieldCandidatesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCandidatesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldCandidatesActionPerformed
+
+    private void jTextFieldTablesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTablesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldTablesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +164,12 @@ public class ElectionFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JButtonConsolidated;
+    private javax.swing.JButton JButtonVoting;
+    private javax.swing.JButton jButtonWinner;
+    private javax.swing.JLabel jLabelCandidates;
+    private javax.swing.JLabel jLabelTables;
+    private javax.swing.JTextField jTextFieldCandidates;
+    private javax.swing.JTextField jTextFieldTables;
     // End of variables declaration//GEN-END:variables
 }
