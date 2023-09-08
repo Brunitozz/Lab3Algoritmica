@@ -4,6 +4,8 @@
  */
 package electoral;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author AULAFISI
@@ -114,6 +116,11 @@ public class ElectionFrame extends javax.swing.JFrame {
 
     private void JButtonVotingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonVotingActionPerformed
         // TODO add your handling code here:
+        int candidates = Integer.parseInt(jTextFieldCandidates.getText());
+        int tables = Integer.parseInt(jTextFieldTables.getText());
+        _election =new Election(candidates, tables);
+        String message = _election.voting();
+        JOptionPane.showMessageDialog(this, message, "Voting", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_JButtonVotingActionPerformed
 
     private void jButtonWinnerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonWinnerActionPerformed
